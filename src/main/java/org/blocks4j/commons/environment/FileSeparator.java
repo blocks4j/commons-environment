@@ -15,6 +15,7 @@
  */
 package org.blocks4j.commons.environment;
 
+
 public class FileSeparator {
 
     public static String value() {
