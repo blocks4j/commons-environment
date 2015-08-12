@@ -15,18 +15,9 @@
  */
 package org.blocks4j.commons.environment;
 
-import java.util.Properties;
-
 public class FileSeparator {
 
     public static String value() {
         return System.getProperty("file.separator");
-    }
-
-    public static void main(String[] args) {
-        Properties props = System.getProperties();
-        for (Object entry : props.keySet()) {
-            System.out.println(entry + "=" + props.getProperty(entry.toString()));
-        }
     }
 }
