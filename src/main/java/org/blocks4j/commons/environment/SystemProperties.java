@@ -16,9 +16,21 @@
 package org.blocks4j.commons.environment;
 
 
-public class LineSeparator {
+public class SystemProperties {
 
-    public static String value() {
+    public static String fileEncoding() {
+        return System.getProperty("file.encoding");
+    }
+
+    public static String fileSeparator() {
+        return System.getProperty("file.separator");
+    }
+
+    public static String pathSeparator() {
+        return System.getProperty("path.separator");
+    }
+
+    public static String lineSeparator() {
         return System.getProperty("line.separator");
     }
 }
