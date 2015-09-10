@@ -18,19 +18,24 @@ package org.blocks4j.commons.environment;
 
 public class SystemProperties {
 
+    private static final String fileEncoding = System.getProperty("file.encoding");
+    private static final String fileSeparator = System.getProperty("file.separator");
+    private static final String pathSeparator = System.getProperty("path.separator");
+    private static final String lineSeparator = System.getProperty("line.separator");
+
     public static String fileEncoding() {
-        return System.getProperty("file.encoding");
+        return fileEncoding;
     }
 
     public static String fileSeparator() {
-        return System.getProperty("file.separator");
+        return fileSeparator;
     }
 
     public static String pathSeparator() {
-        return System.getProperty("path.separator");
+        return pathSeparator;
     }
 
     public static String lineSeparator() {
-        return System.getProperty("line.separator");
+        return lineSeparator;
     }
 }
