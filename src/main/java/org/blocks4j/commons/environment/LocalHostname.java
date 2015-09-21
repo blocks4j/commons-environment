@@ -23,19 +23,13 @@ import org.apache.commons.lang3.StringUtils;
 
 public class LocalHostname {
 
-    private static final String runtimeHostName;
-    private static final String localHostName;
-
-    static {
-        runtimeHostName = runtimeStrategy();
-        localHostName = fallbackStrategy();
-    }
-
     /**
      * @param fallbackName - the name to return in case of error
      */
     public static String getName(String fallbackName) {
-        return runtimeHostName != null ? runtimeHostName : localHostName != null ? localHostName : fallbackName;
+        String runtimeHostName = runtimeStrategy();
+        String localHostName = fallbackStrategy();
+        return runtimeStrategy() != null ? runtimeHostName : localHostName != null ? localHostName : fallbackName;
     }
 
     private static String fallbackStrategy() {
